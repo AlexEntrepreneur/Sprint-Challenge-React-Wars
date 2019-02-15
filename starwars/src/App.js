@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import CardsList from './components/CardsList.js';
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      nextUrl: ''
     };
   }
 
@@ -22,7 +24,10 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+        this.setState(currentState => ({
+          starwarsChars: currentState.starwarsChars.concat(data.results),
+          nextUrl: data.next
+        }));
       })
       .catch(err => {
         throw new Error(err);
@@ -31,8 +36,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1 className="Header">React Wars</h1>
+      <div className="app-container">
+        <header>
+          <h1 className="Header">React Wars</h1>
+        </header>
+        <CardsList cardsData={this.state.starwarsChars} loadMoreCharacters={this.getCharacters} nextRequestURL={this.state.nextUrl}/>
       </div>
     );
   }

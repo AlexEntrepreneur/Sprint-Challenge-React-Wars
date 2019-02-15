@@ -1,8 +1,47 @@
-.App {
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: white;
+  font-size: 1.6rem;
+  background-color: #282C34;
+}
+
+.app-container {
   text-align: center;
 }
-.Header {
-  color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
+
+.cards-list-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 7rem;
 }
-/* write your parent styles in here for your App.js */
+
+.character-card {
+  color: #4C4C4C;
+  background-color: white;
+  border-radius: .8rem;
+  box-shadow: 0 .2rem .4rem rgba(0,0,0,.22);
+  padding: 7rem 2.5rem;
+  display: inline-block;
+  margin: 1rem;
+  width: calc((100% / 3) - 3rem);
+}
+
+.load-more-btn {
+  position: fixed;
+  bottom: 2rem;
+  padding: 1rem 5rem;
+  border-radius: .8rem;
+  outline: none;
+  border: 2px solid rgba(72,221,255,1);
+  box-shadow: 0 .2rem 1rem rgba(0,0,0,.3);
+  font-size: inherit;
+  color: #48DDFF;
+}
