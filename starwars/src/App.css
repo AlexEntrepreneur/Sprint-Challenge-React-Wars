@@ -1,8 +1,34 @@
-.App {
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: white;
+  font-size: 1.6rem;
+  background-color: #282C34;
+}
+
+.app-container {
   text-align: center;
 }
-.Header {
-  color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
+
+.cards-list-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-/* write your parent styles in here for your App.js */
+
+.character-card {
+  color: #4C4C4C;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 1 2px 4px rgba(0,0,0,.22);
+  padding: 7rem 2.5rem;
+  display: inline-block;
+  margin: 1rem;
+  width: calc((100% / 3) - 3rem);
+}

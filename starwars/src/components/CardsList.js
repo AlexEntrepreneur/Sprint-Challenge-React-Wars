@@ -6,7 +6,7 @@ function CardsList({ cardsData }) {
     {
       cardsData.map(character => {
         return (
-          <div className="chacter-card" key={character.name}>
+          <div className="character-card" key={character.name}>
             <h2>{ character.name }</h2>
             <p className="character-attr"><b>Born:</b> { character.birth_year }</p>
             <p className="character-attr"><b>Gender:</b> { character.gender }</p>
