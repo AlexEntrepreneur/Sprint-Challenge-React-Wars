@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CardsList({ cardsData }) {
+function CardsList({ cardsData, loadMoreCharacters, nextRequestURL }) {
   return (
     <div className="cards-list-container">
     {
@@ -18,6 +18,7 @@ function CardsList({ cardsData }) {
         )
       })
     }
+    <button className="load-more-btn" onClick={() => loadMoreCharacters(nextRequestURL)}>Load More</button>
     </div>
   );
 }
